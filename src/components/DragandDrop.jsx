@@ -41,7 +41,7 @@ function DragAndDrop() {
   }
 
   const redirect = () => {
-    setTimeout(() => navigate("/services"), 3000)
+    setTimeout(() => navigate("/removebg"), 3000)
   }
 
   const cumpleSize = (bytes) => {
@@ -153,7 +153,7 @@ function DragAndDrop() {
 
 
         <form className='mt-4 flex items-center ' onSubmit={onSubmitImageUrl}>
-          <label className=' text-yellow-600  ' htmlFor="">O ingresa url ➡️</label>
+          <label className=' text-yellow-600  ' htmlFor="">O ingresa la url ➡️</label>
           <input className=' rounded p-1 mx-4 focus:outline-blue-600 focus:outline  border' type="url" name="urlimage" id="urlimage" required />
            {loading ?  <Loading />  :  <button className='border rounded-full hover:scale-105  transition-all duration-300 bg-blue-800 hover:bg-blue-900  h-fit  p-1'><svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg></button>}
         </form>
