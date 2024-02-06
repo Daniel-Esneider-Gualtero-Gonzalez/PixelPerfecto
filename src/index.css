@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    color-scheme: dark;
+}
+
+.animation-remolino {
+
+    perspective: 800px;
+    animation-name: remolino;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+
+}
+
+.animation-drop {
+    animation-name: dropAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes remolino {
+
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(50px) translateY(50px) scale(0.60);
+    }
+
+    50% {
+        transform: translateX(0) translateY(100px) scale(0.75);
+    }
+
+    75% {
+        transform: translateX(-50px) translateY(50px) scale(0.65);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+
+
+}
+
+@keyframes dropAnimation {
+    from {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.4) rotate(360deg);
+        opacity: 0;
+    }
+}
