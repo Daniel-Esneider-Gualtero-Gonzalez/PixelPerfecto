@@ -41,7 +41,7 @@ function DragAndDrop() {
   }
 
   const redirect = () => {
-    setTimeout(() => navigate("/removebg"), 3000)
+    setTimeout(() => navigate("/removeBg"), 3000)
   }
 
   const cumpleSize = (bytes) => {
@@ -115,6 +115,7 @@ function DragAndDrop() {
       const contentType = fetchImage.headers.get('content-type')
 
       if(!contentType.includes("image/")) return handleErrorFile("Verifica que la url sea de una imagen valida")
+      formData.append("image_url", `${url}`)
       setImageCurrent(url)
       redirect()
 
