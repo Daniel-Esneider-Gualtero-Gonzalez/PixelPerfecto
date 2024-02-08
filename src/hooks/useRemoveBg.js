@@ -10,18 +10,15 @@ function useRemoveBg() {
     const removeBg = async (formData)=>{
         try {
             setLoading(true)
-            const response = await fetch("https://techhk.aoscdn.com/api/tasks/visual/segmentation", {
+            const response = await fetch("http://localhost:3000/api/removebg", {
               method: "POST",
-              headers: {
-                "X-API-KEY": API_KEY,
-              },
               body: formData,
             });
             
             // if(!response.ok) return setError("error al remover el bg")
             const responseBody = await response.json();
 
-            console.log("response",response)
+            console.log("response body",responseBody)
       
             return setResult("data:image/png;base64," + responseBody.data.image)
       
