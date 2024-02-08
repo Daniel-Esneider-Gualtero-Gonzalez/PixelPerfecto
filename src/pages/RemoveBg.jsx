@@ -12,7 +12,7 @@ function RemoveBg() {
     const { loading, error, result, removeBg } = useRemoveBg()
 
     useEffect(()=>{
-        if(!formData.get("image_file")) return navigate("/")
+        if(!formData.get("image_file") && !formData.get("image_url") ) return navigate("/")
         removeBg(formData)
     } ,[])
 
