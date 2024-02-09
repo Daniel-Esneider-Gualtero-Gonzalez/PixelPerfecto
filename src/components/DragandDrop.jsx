@@ -88,6 +88,7 @@ function DragAndDrop() {
         if (imageSrc.error) {
           return console.log("ERROR  al convertir", imageSrc.error)
         }
+        nameFile = file.name
         saveFile(file)
         setImageCurrent(imageSrc)
         redirect()
