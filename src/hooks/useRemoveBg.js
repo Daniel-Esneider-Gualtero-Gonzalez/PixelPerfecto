@@ -10,7 +10,7 @@ function useRemoveBg() {
     const removeBg = async (formData)=>{
         try {
             setLoading(true)
-            const response = await fetch("http://localhost:3000/api/removebg", {
+            const response = await fetch("https://backend-pixel-perfect.vercel.app/api/removebg", {
               method: "POST",
               body: formData,
             });
